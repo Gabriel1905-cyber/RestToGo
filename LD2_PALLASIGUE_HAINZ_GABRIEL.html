@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResToGo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://img.freepik.com/premium-photo/food-background-black-herbs-spices-utensil-top-view-with-space-text_1040174-349.jpg?semt=ais_hybrid'); 
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+        }
+
+        .header {
+            background-color: rgba(0, 0, 0, 0.9);
+            color: #FFD700;
+            padding: 10px; /* Reduced from 20px */
+        }
+
+
+        nav {
+            margin: 20px 0;
+        }
+
+        nav button {
+            padding: 12px 18px;
+            margin: 5px;
+            cursor: pointer;
+            border: 2px solid white;
+            background-color: black;
+            color: #FFD700;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        nav button:hover {
+            background-color: #FFD700;
+            color: black;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            background-color: rgba(20, 20, 20, 0.9);
+            border-radius: 10px;
+            color: white;
+            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+        }
+
+        /* Styling the welcome message */
+        #home p {
+            font-size: 28px;
+            font-weight: bold;
+            color: #FFD700;
+            margin-top: 10px;
+        }
+
+        .menu .menu-items {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .menu .menu-item {
+            text-align: center;
+            width: 250px;
+            padding: 30px;
+            background-color: rgba(40, 40, 40, 0.9);
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2);
+        }
+
+        /* Larger Food Images */
+         img {
+            width: 70%;
+            max-width: 150px;
+            height: auto;
+            margin: 20px; /* Increased margin for double spacing */
+            border-radius: 5px;
+            border: 2px solid white;
+        }
+
+
+        .hidden {
+            display: none;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-top: 5px;
+            color: #FFD700;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>ResToGo</h1>
+    </div>
+    <nav>
+        <button onclick="showSection('home')">Home</button>
+        <button onclick="showSection('menu')">Menu</button>
+        <button onclick="showSection('delivery')">Delivery</button>
+        <button onclick="showSection('about')">About Us</button>
+    </nav>
+
+    <div id="home" class="container">
+        <p>Welcome to ResToGo, your favorite online food ordering service.</p>
+    </div>
+
+    <div id="menu" class="container hidden">
+        <div class="menu-items">
+            <div class="menu-item">
+                <h3>Appetizers</h3>
+                <img src="https://images.immediate.co.uk/production/volatile/sites/30/2014/05/Epic-summer-salad-hub-2646e6e.jpg" alt="Appetizer">  <img src="https://assets.epicurious.com/photos/54ac3db419925f464b3a9828/master/pass/51237100_calamari_1x1.jpg" alt="Appetizer">
+                <label>Delicious starters to begin your meal</label>
+            </div>
+            <div class="menu-item">
+                <h3>Main Dish</h3>
+                <img src="https://www.unileverfoodsolutions.com.ph/chef-inspiration/food-delivery/10-crowd-favorite-filipino-dishes/jcr:content/parsys/set1/row2/span12/columncontrol_copy_c_1292622576/columnctrl_parsys_2/textimage_copy/image.transform/jpeg-optimized/image.1697455717956.jpg" alt="Main Dish"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Adobo_DSCF4391.jpg/1200px-Adobo_DSCF4391.jpg" alt="Main Dish">
+                <label>Hearty and satisfying main courses</label>
+            </div>
+            <div class="menu-item">
+                <h3>Dessert</h3>
+                <img src="https://www.thespruceeats.com/thmb/bqq_P7YZtu4Br9kPHqVkjib1QhQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/halo-halo-5409582-step-08-18bca395e05542539cf4eb2e87fd6882.jpg" alt="Dessert"> <img src="https://salu-salo.com/wp-content/uploads/2014/09/Leche-Flan-with-Cream-Cheese-7.jpg" alt="Dessert">
+                <label>Sweet treats to end your meal</label>
+            </div>
+            <div class="menu-item">
+                <h3>Beverages</h3>
+                <img src="https://s7d1.scene7.com/is/image/mcdonalds/DC_202402_0521_MediumCoke_ContourGlassv1_1564x1564:product-header-mobile?wid=1313&hei=1313&dpr=off" alt="Beverages"> <img src="https://www.allrecipes.com/thmb/REETjYFdVRmMtwVHPT66VmQVmmI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/109190-smooth-sweet-tea-DDMFS-4x3-9e849a386d414cb2b852099f02b6782d.jpg" alt="Beverages">
+                <label>Refreshing drinks to accompany your meal</label>
+            </div>
+        </div>
+    </div>
+
+    <div id="delivery" class="container hidden">
+        <h2>Delivery</h2>
+        <p>Enter your address and payment method.</p>
+    </div>
+
+    <div id="about" class="container hidden">
+        <h2>About Us</h2>
+        <p>Contact us for more details.</p>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.container').forEach(div => div.classList.add('hidden'));
+            document.getElementById(sectionId).classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
